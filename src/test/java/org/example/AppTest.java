@@ -15,12 +15,12 @@ public class AppTest {
         //
         //
 
-        assertEquals( 3 , 3);
+        assertEquals( 5 , 3);
     }
 
     @Test
     public void checkTwoValuesNotEquals(){
-        assertNotEquals( 3 , 4);
+        assertNotEquals( 3 , 3);
     }
 
     @Test
