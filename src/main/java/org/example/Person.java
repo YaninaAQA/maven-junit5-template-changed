@@ -19,7 +19,6 @@ public class Person {
         name = newName;
     }
 
-
     public String getName() {
         return name;
     }
