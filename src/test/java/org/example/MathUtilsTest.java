@@ -1,91 +1,71 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MathUtilsTest {
 
+    MathUtils tests;
+
+    @BeforeEach
+    void setup() {
+        tests = new MathUtils();
+    }
+
     @Test
     public void testAddingTwoPositiveInteger() {
-        // Arrange
-        MathUtils test1 = new MathUtils();
-        test1.a = 3;
-        test1.b = 5;
-
         // Act
-        test1.add();
+        int result = tests.add(3, 3);
 
         // Assert
-        assertEquals(test1.add(), 8);
+        assertEquals(result, 6);
     }
 
     @Test
     public void testAddingPositiveIntegerAndZero() {
-        // Arrange
-        MathUtils test2 = new MathUtils();
-        test2.a = 6;
-        test2.b = 0;
-
         // Act
-        test2.add();
+        int result = tests.add(5, 0);
 
         // Assert
-        assertEquals(test2.add(), 6);
+        assertEquals(result, 5);
     }
 
     @Test
-    public void testAddingNegativeIntegerAndPossitiveInteger() {
-        // Arrange
-        MathUtils test3 = new MathUtils();
-        test3.a = -5;
-        test3.b = 5;
-
+    public void testAddingNegativeIntegerAndPositiveInteger() {
         // Act
-        test3.add();
+        int result = tests.add(-3, 3);
 
         // Assert
-        assertEquals(test3.add(), 0);
+        assertEquals(result, 0);
     }
 
     @Test
-    public void testAddingLargeIneger() {
-        // Arrange
-        MathUtils test4 = new MathUtils();
-        test4.a = 2147483647;
-        test4.b = 1;
-
+    public void testAddingLargeInteger() {
         // Act
-        test4.add();
+
+        int result = tests.add(2147483647, 1);
 
         // Assert
-        assertEquals(test4.add(), -2147483648);
+        assertEquals(result, -2147483648);
     }
 
     @Test
     public void testFirstArgumentLarger() {
-        // Arrange
-        MathUtils test5 = new MathUtils();
-        test5.firstArgument = 10;
-        test5.secondArgument = 5;
 
         // Act
-        test5.bigger();
-
+        tests.greater(10, 5);
         // Assert
         assertTrue(true);
-
     }
 
     @Test
     public void testSecondArgumentLarger() {
-        // Arrange
-        MathUtils test6 = new MathUtils();
-        test6.firstArgument = 5;
-        test6.secondArgument = 10;
-
         // Act
-        test6.bigger();
+        tests.greater(5, 10);
 
         // Assert
         assertFalse(false);
@@ -94,17 +74,36 @@ public class MathUtilsTest {
 
     @Test
     public void testBothArgumentsEqual() {
-        // Arrange
-        MathUtils test7 = new MathUtils();
-        test7.firstArgument = 5;
-        test7.secondArgument = 5;
-
         // Act
-        test7.bigger();
-
+        tests.greater(3, 5);
         // Assert
         assertFalse(false);
     }
 
+    @Test
+    public void testDivide() {
+        // Act
+        float result = tests.divide(5.5f, 3.3f);
+        // Assert
+        assertEquals(result, 1.66666, 0.001);
+    }
 
+    @Test
+    public void testMultiple() {
+        // Act
+        float result = tests.multiple(2.1f, 3.2f);
+        // Assert
+        assertEquals(result, 6.72, 0.001);
+    }
+
+    @ValueSource(floats = {1.5f, 3.2f, 7.1f})
+    @ParameterizedTest
+    public void testSquare(float a) {
+
+        // Act
+        float result = tests.square(a);
+
+        // Assert
+        assertEquals(a * a, result, 0.001);
+    }
 }

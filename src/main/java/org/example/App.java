@@ -15,6 +15,8 @@ public class App {
 
         System.out.println(human.getAge());
 
+        MathUtils calc = new MathUtils();
+        System.out.println(calc.square(2.3f));
 
     }
 }
