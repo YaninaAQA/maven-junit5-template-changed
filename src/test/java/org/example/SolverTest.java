@@ -1,25 +1,26 @@
 package org.example;
+
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolverTest {
 
     Solver quadraticEquations;
 
     @BeforeEach
-    void setup() {quadraticEquations = new Solver();}
+    void setup() {
+        quadraticEquations = new Solver();
+    }
 
     @ParameterizedTest
     @CsvSource({"3, 7, 10, 0", "6, 12, 18, 0", "1000, 200, 69, 0"})
     public void testNumberOfRootsWithPositiveNumbers(int a, int b, int c, int expected) {
 
         // Act
-        int result = quadraticEquations.numberOfRoots(a,b,c);
+        int result = quadraticEquations.numberOfRoots(a, b, c);
 
         //Assert
         assertEquals(expected, result);
@@ -30,7 +31,7 @@ public class SolverTest {
     public void testNumberOfRootsWithNegativeNumbers(int a, int b, int c, int expected) {
 
         // Act
-        int result = quadraticEquations.numberOfRoots(a,b,c);
+        int result = quadraticEquations.numberOfRoots(a, b, c);
 
         //Assert
         assertEquals(expected, result);
@@ -41,7 +42,7 @@ public class SolverTest {
     public void testNumberOfRootsWithPositiveAndNegativeNumbers(int a, int b, int c, int expected) {
 
         // Act
-        int result = quadraticEquations.numberOfRoots(a,b,c);
+        int result = quadraticEquations.numberOfRoots(a, b, c);
 
         //Assert
         assertEquals(expected, result);
@@ -52,7 +53,7 @@ public class SolverTest {
     public void testNumberOfRootsWithPositiveNumbersAndZero(int a, int b, int c, int expected) {
 
         // Act
-        int result = quadraticEquations.numberOfRoots(a,b,c);
+        int result = quadraticEquations.numberOfRoots(a, b, c);
 
         //Assert
         assertEquals(expected, result);
@@ -63,7 +64,7 @@ public class SolverTest {
     public void testNumberOfRootsWithNegativeNumbersAndZero(int a, int b, int c, int expected) {
 
         // Act
-        int result = quadraticEquations.numberOfRoots(a,b,c);
+        int result = quadraticEquations.numberOfRoots(a, b, c);
 
         //Assert
         assertEquals(expected, result);

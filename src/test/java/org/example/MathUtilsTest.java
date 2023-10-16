@@ -58,7 +58,7 @@ public class MathUtilsTest {
     public void testFirstArgumentLarger() {
 
         // Act
-      boolean result = tests.greater(10, 5);
+        boolean result = tests.greater(10, 5);
         // Assert
         assertTrue(result);
     }
@@ -113,7 +113,7 @@ public class MathUtilsTest {
     public void testAddWithCsvSource(int a, int b, int expected) {
 
         // Act
-        int result = tests.add(a,b);
+        int result = tests.add(a, b);
 
         //Assert
         assertEquals(expected, result);
@@ -124,7 +124,7 @@ public class MathUtilsTest {
     public void testMultiplyWithCsvSource(float a, float b, float expected) {
 
         // Act
-        float result = tests.multiple(a,b);
+        float result = tests.multiple(a, b);
 
         // Assert
         assertEquals(expected, result);

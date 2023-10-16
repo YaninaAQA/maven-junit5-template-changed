@@ -22,6 +22,5 @@ public class App {
         System.out.println(solver.numberOfRoots(-5, 6, 15));
 
 
-
     }
 }
