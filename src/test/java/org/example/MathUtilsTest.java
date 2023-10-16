@@ -57,18 +57,18 @@ public class MathUtilsTest {
     public void testFirstArgumentLarger() {
 
         // Act
-        tests.greater(10, 5);
+      boolean result = tests.greater(10, 5);
         // Assert
-        assertTrue(true);
+        assertTrue(result);
     }
 
     @Test
     public void testSecondArgumentLarger() {
         // Act
-        tests.greater(5, 10);
+        boolean result = tests.greater(5, 10);
 
         // Assert
-        assertFalse(false);
+        assertFalse(result);
 
     }
 
@@ -96,7 +96,7 @@ public class MathUtilsTest {
         assertEquals(result, 6.72, 0.001);
     }
 
-    @ValueSource(floats = {1.5f, 3.2f, 7.1f})
+    @ValueSource(floats = {1.5f, 3f, -1.5f})
     @ParameterizedTest
     public void testSquare(float a) {
 
