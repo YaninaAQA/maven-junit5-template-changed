@@ -18,5 +18,10 @@ public class App {
         MathUtils calc = new MathUtils();
         System.out.println(calc.square(2.3f));
 
+        Solver solver = new Solver();
+        System.out.println(solver.numberOfRoots(-5, 6, 15));
+
+
+
     }
 }

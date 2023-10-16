@@ -3,6 +3,7 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -105,5 +106,27 @@ public class MathUtilsTest {
 
         // Assert
         assertEquals(a * a, result, 0.001);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"3, 7, 10", "6, 12, 18", "5, -2, 3", "-7, -10, -17"})
+    public void testAddWithCsvSource(int a, int b, int expected) {
+
+        // Act
+        int result = tests.add(a,b);
+
+        //Assert
+        assertEquals(expected, result);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"2.0f, 5.0f, 10.0f", "6.0f, 7.0f, 42.0f", "-3.0f, -2.0f, 6.0f", "-5.0f, 2.0f, -10.0f"})
+    public void testMultiplyWithCsvSource(float a, float b, float expected) {
+
+        // Act
+        float result = tests.multiple(a,b);
+
+        // Assert
+        assertEquals(expected, result);
     }
 }

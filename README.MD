@@ -12,3 +12,15 @@
 | 8  | Divide floats numbers                        | pass   |
 | 9  | Multiple floats numbers                      | pass   |
 | 10 | Parameterized Square floats numbers          | pass   |
+
+
+# Checklist for Solver
+
+
+| №  | Test name                                                      | Status |
+|----|----------------------------------------------------------------|--------|
+| 1  | Calculating number of roots with positive numbers              | pass   |
+| 2  | Calculating number of roots with negative numbers              | pass   |
+| 3  | Calculating number of roots with positive and negative numbers | pass   |
+| 4  | Calculating number of roots with positive numbers and zero     | pass   |
+| 5  | Calculating number of roots with negative numbers and zero     | pass   | 
