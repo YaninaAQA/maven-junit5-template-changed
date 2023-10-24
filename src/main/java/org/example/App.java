@@ -18,8 +18,18 @@ public class App {
         MathUtils calc = new MathUtils();
         System.out.println(calc.square(2.3f));
 
-        Solver solver = new Solver();
-        System.out.println(solver.numberOfRoots(-5, 6, 15));
+
+        String[] seasons = new String[4];
+        seasons[0] = "Winter";
+        seasons[1] = "Spring";
+        seasons[2] = "Summer";
+        seasons[3] = "Autumn";
+
+        int[] myArray = new int[10];
+
+        String[] surnames = {
+                "Ivanov", "Petrov", "Sidorov"
+        };
 
 
     }
