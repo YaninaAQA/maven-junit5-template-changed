@@ -29,18 +29,17 @@
 |----|--------------------------------------------------------------------------------|--------|
 | 1  | Creating №1 order with all fields filled positive data (POST method)           |        |
 | 2  | Creating №2 order only with required fields filled positive data (Post method) |        |
-| 5  | Getting order id with id "0" (Get method)                                      |        | 
-| 6  | Getting order id with id "1" (Get method)                                      |        |
-| 7  | Getting order id with id "2" (Get method)                                      |        |
-| 8  | Getting order id with id "5" (Get method)                                      |        |
-| 9  | Getting order id with id "9" (Get method)                                      |        |
-| 10 | Getting order id with id "10" (Get method)                                     |        |
-| 11 | Getting order id with id "11" (Get method)                                     |        |
-| 12 | Getting order id with id from №3 order (Get method)                            |        |
-| 13 | Creating order without "courierId" field (negative test, POST method)          |        |
-| 14 | Creating order without "id" field (negative test, POST method)                 |        |
-| 15 | Creating order with incorrect Json body (negative test, POST method)           |        |
-| 16 | Getting order id with id "15" (negative test, Get method)                      |        |
-| 17 | Getting order id with id "-3" (negative test, Get method)                      |        |
-| 18 | Getting order id with id "15.6589545" (negative test, Get method)              |        |
-| 19 | Getting order id with string "blablabla" (negative test, Get method)           |        |
+| 3  | Getting order id with id "1" (Get method)                                      |        |
+| 4  | Getting order id with id "2" (Get method)                                      |        |
+| 5  | Getting order id with id "5" (Get method)                                      |        |
+| 6  | Getting order id with id "9" (Get method)                                      |        |
+| 7  | Getting order id with id "10" (Get method)                                     |        |
+| 8  | Creating order without "courierId" field (negative test, POST method)          |        |
+| 9  | Creating order without "id" field (negative test, POST method)                 |        |
+| 10 | Creating order with incorrect Json body (negative test, POST method)           |        |
+| 11 | Getting order id with id "15" (negative test, Get method)                      |        |
+| 12 | Getting order id with id "-3" (negative test, Get method)                      |        |
+| 13 | Getting order id with id "15.6589545" (negative test, Get method)              |        |
+| 14 | Getting order id with id "0" (negative test, Get method)                       |        |
+| 15 | Getting order id with string "blablabla" (negative test, Get method)           |        |
+| 16 | Getting order id with id "11" (negative test, Get method)                      |        |
