@@ -25,21 +25,12 @@
 
 # Checklist for test-order-controller
 
-| №  | Test name                                                                      | Status |
-|----|--------------------------------------------------------------------------------|--------|
-| 1  | Creating №1 order with all fields filled positive data (POST method)           |        |
-| 2  | Creating №2 order only with required fields filled positive data (Post method) |        |
-| 3  | Getting order id with id "1" (Get method)                                      |        |
-| 4  | Getting order id with id "2" (Get method)                                      |        |
-| 5  | Getting order id with id "5" (Get method)                                      |        |
-| 6  | Getting order id with id "9" (Get method)                                      |        |
-| 7  | Getting order id with id "10" (Get method)                                     |        |
-| 8  | Creating order without "courierId" field (negative test, POST method)          |        |
-| 9  | Creating order without "id" field (negative test, POST method)                 |        |
-| 10 | Creating order with incorrect Json body (negative test, POST method)           |        |
-| 11 | Getting order id with id "15" (negative test, Get method)                      |        |
-| 12 | Getting order id with id "-3" (negative test, Get method)                      |        |
-| 13 | Getting order id with id "15.6589545" (negative test, Get method)              |        |
-| 14 | Getting order id with id "0" (negative test, Get method)                       |        |
-| 15 | Getting order id with string "blablabla" (negative test, Get method)           |        |
-| 16 | Getting order id with id "11" (negative test, Get method)                      |        |
+| № | Test name                                                                                                                                                                                                                     | Status |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| 1 | Creating order with all fields filled positive data (Post method): <br> "status": "OPEN"; <br> "courierId": 1; <br> "customerName": "Nestle"; <br> "customerPhone": "505253"; <br> "comment": "without comment"; <br> "id": 1 |        |
+| 2 | Creating order without "courierId" field (negative test, POST method)                                                                                                                                                         |        |
+| 3 | Creating order with "courierId" field: "###" (negative test, POST method)                                                                                                                                                     |        |
+| 4 | Creating order with incorrect Json body (negative test, POST method)                                                                                                                                                          |        |
+| 5 | Getting order id with next test data: "id" from 1 to 10 (positive test, Get method)                                                                                                                                           |        |
+| 6 | Getting order id with next test data: "id": "11", "-3", "15.6589545", "0" (negative test, Get method)                                                                                                                         |        |
+| 7 | Getting order id with string "blablabla" (negative test, Get method)                                                                                                                                                          |        |         |
