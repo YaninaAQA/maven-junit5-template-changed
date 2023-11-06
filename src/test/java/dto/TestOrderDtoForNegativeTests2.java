@@ -34,5 +34,27 @@ public class TestOrderDtoForNegativeTests2 {
         this.comment = comment;
     }
 
+    public String getStatus() {
+        return status;
+    }
 
+    public String getCourierId() {
+        return courierId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerPhone() {
+        return customerPhone;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public long getId() {
+        return id;
+    }
 }
