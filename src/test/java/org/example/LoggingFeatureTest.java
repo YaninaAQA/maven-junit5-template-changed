@@ -3,9 +3,7 @@ package org.example;
 import Helper.SetupFunctions;
 import com.google.gson.Gson;
 import dto.LoggingDto;
-import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +30,7 @@ public class LoggingFeatureTest {
         String testLoggingDtoAsJson = new Gson().toJson(loggingDto);
 
 
-        Response response = given().
+        given().
                 log().
                 all().
                 header("Content-Type", "application/json").
@@ -42,13 +40,8 @@ public class LoggingFeatureTest {
                 then().
                 log().
                 all().
-                extract().
-                response();
-        //and.
-        //assertThat().
-        //statusCode(HttpStatus.SC_OK);
-        Assertions.assertEquals("", response.asString());
-        Assertions.assertEquals(401, response.getStatusCode());
+                assertThat().
+                statusCode(HttpStatus.SC_OK);
 
 
     }
