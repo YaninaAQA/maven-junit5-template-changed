@@ -33,4 +33,26 @@
 | 4 | Creating order with incorrect Json body (negative test, POST method)                                                                                                                                                          |        |
 | 5 | Getting order id with next test data: "id" from 1 to 10 (positive test, Get method)                                                                                                                                           |        |
 | 6 | Getting order id with next test data: "id": "11", "-3", "15.6589545", "0" (negative test, Get method)                                                                                                                         |        |
-| 7 | Getting order id with string "blablabla" (negative test, Get method)                                                                                                                                                          |        |         |
+| 7 | Getting order id with string "blablabla" (negative test, Get method)                                                                                                                                                          |        | 
+
+
+# Checklist of the Tallin delivery UI
+
+| № | Test name                                                                          | Status |
+|---|------------------------------------------------------------------------------------|--------|
+| 1 | Check the possibility Sign in with the correct login and password (EN)             |        |
+| 2 | Check the possibility Sign in with the correct login and incorrect password (EN)   |        |
+| 3 | Check the possibility Sign in with the incorrect login and correct password (EN)   |        |
+| 4 | Check the possibility Sign in with the incorrect login and incorrect password (EN) |        |
+| 5 | Check the possibility Sign in with the correct login and password (RU)             |        |
+| 6 | Check the possibility Sign in with the incorrect login and incorrect password (RU) |        |
+
+# List of web elements
+
+| № | Name of element | Xpath selector                       |
+|---|-----------------|--------------------------------------|
+| 1 | Login field     | //input[@data-name="username-input"] |
+| 2 | Password field  | //input[@data-name="password-input"] |
+| 3 | Sign in button  | //button[@data-name="signIn-button"] |
+| 4 | EN button       | //button[text()="EN"]                |
+| 5 | RU button       | //button[text()="RU"]                |
