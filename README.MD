@@ -36,23 +36,30 @@
 | 7 | Getting order id with string "blablabla" (negative test, Get method)                                                                                                                                                          |        | 
 
 
-# Checklist of the Tallin delivery UI
+# Checklist of the Tallinn delivery UI
 
-| № | Test name                                                                          | Status |
-|---|------------------------------------------------------------------------------------|--------|
-| 1 | Check the possibility Sign in with the correct login and password (EN)             |        |
-| 2 | Check the possibility Sign in with the correct login and incorrect password (EN)   |        |
-| 3 | Check the possibility Sign in with the incorrect login and correct password (EN)   |        |
-| 4 | Check the possibility Sign in with the incorrect login and incorrect password (EN) |        |
-| 5 | Check the possibility Sign in with the correct login and password (RU)             |        |
-| 6 | Check the possibility Sign in with the incorrect login and incorrect password (RU) |        |
+| №  | Test name                                                                      | Status |
+|----|--------------------------------------------------------------------------------|--------|
+| 1  | Verify Sign in with the correct login and password (EN)                        |        |
+| 2  | Verify Sign in with the correct login and incorrect password (EN)              |        |
+| 3  | Verify Sign in with the incorrect login and correct password (EN)              |        |
+| 4  | Verify Sign in with the incorrect login and incorrect password (EN)            |        |
+| 5  | Verify Sign in with the correct login and password (RU)                        |        |
+| 6  | Verify Sign in with the incorrect login and incorrect password (RU)            |        |
+| 7  | Verify that each character of the password is replaced by a circle             |        |                                                                             |        |
+| 8  | Verify that popup with error appears after login with incorrect credential     |        |
+| 9  | Verify that error message appears when login contains only 1 character         |        |
+| 10 | Verify that error message appears when password contains less then 8 character |        |
+| 11 | Verify that error message appears if the login field is not filled in          |        |
+| 12 | Verify that error message appears if the password field is not filled in       |        |
 
 # List of web elements
 
-| № | Name of element | Xpath selector                       |
-|---|-----------------|--------------------------------------|
-| 1 | Login field     | //input[@data-name="username-input"] |
-| 2 | Password field  | //input[@data-name="password-input"] |
-| 3 | Sign in button  | //button[@data-name="signIn-button"] |
-| 4 | EN button       | //button[text()="EN"]                |
-| 5 | RU button       | //button[text()="RU"]                |
+| № | Name of element          | Xpath selector                               |
+|---|--------------------------|----------------------------------------------|
+| 1 | Login field              | //input[@data-name="username-input"]         |
+| 2 | Password field           | //input[@data-name="password-input"]         |
+| 3 | Sign in button           | //button[@data-name="signIn-button"]         |
+| 4 | EN button                | //button[text()="EN"]                        |
+| 5 | RU button                | //button[text()="RU"]                        |
+| 6 | Pop up window with error | //div[@data-name="authorizationError-popup"] |
